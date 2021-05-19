@@ -279,7 +279,8 @@ nav li{
 
 /* Director section */
 .director{
-    height: 500px;
+    height: auto;
+    padding: 0px 0px 20px 0px;
     width: 100%;
     background-color: #fff;
     background-image: url("/assets/Rectangle\ 48.png");
@@ -288,10 +289,18 @@ nav li{
     background-size: 100px;
 }
 
-.director img{
+.director-image{
     height: 400px;
     position: relative;
     top: -30px;
+}
+
+.director-mobile-image{
+    display: none;
+}
+
+.director-mobile-menu{
+    display: none;
 }
 
 .director .container{
@@ -303,6 +312,7 @@ nav li{
 }
 .director .container div{
     width: 40%;
+    margin-top: 30px;
 }
 
 .director p{
@@ -416,6 +426,26 @@ footer li{
 }
 
 
+@media only screen and (max-width: 400px){
+    .clients img{
+        height: 30px;
+    }
+
+    .services .container{
+        justify-content: space-around !important;
+    }
+
+    .service-img-mobile img{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .director-mobile-image{
+        width: 100% !important;
+    }
+}
+
 @media only screen and (max-width: 675px){
     .menu{
         display: none;
@@ -437,6 +467,10 @@ footer li{
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .arrow{
+        right: 50px;
     }
 }
 
@@ -465,6 +499,69 @@ footer li{
     .uses h2{
         width: 80%;
         margin: 50px auto;
+    }
+
+    .business .container{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .bus-left{
+        margin-bottom: 30px;
+    }
+
+    .bus-left, .bus-right{
+        width: 80%;
+    }
+
+    .bus-right li{
+        margin-bottom: 20px;
+    }
+
+    .director .container{
+        flex-direction: column;
+    }
+
+    .director .container div{
+        width: 90%;
+    }
+
+    .director-image{
+        display: none;
+    }
+
+    .director-mobile-image{
+        display: block;
+        width: 80%;
+        height: 300px;
+        margin: auto;
+    }
+
+    .contact .container{
+        height: auto;
+    }
+
+    .contact p{
+        width: auto;
+    }
+
+    form .container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    form .container input{
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    footer .container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer ul{
+        padding: 0;
     }
 }
 
