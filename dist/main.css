@@ -97,7 +97,7 @@ nav li{
 }
 
 .enquire-container{
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
@@ -472,6 +472,10 @@ footer li{
     .arrow{
         right: 50px;
     }
+
+    .hero{
+        width: auto;
+    }
 }
 
 @media only screen and (max-width: 800px){
@@ -498,12 +502,12 @@ footer li{
 
     .uses h2{
         width: 80%;
-        margin: 50px auto;
+        margin: 0;
     }
 
     .business .container{
         flex-direction: column;
-        width: 90%;
+        width: 100%;
     }
 
     .bus-left{
@@ -516,6 +520,10 @@ footer li{
 
     .bus-right li{
         margin-bottom: 20px;
+    }
+
+    .bus-right ul{
+        padding: 20px;
     }
 
     .director .container{
@@ -570,10 +578,6 @@ footer li{
         width: 90% !important;
     }
 
-    .use-container{
-        justify-content: center !important;
-    }
-
     .service-img img{
         display: none;
     }
@@ -588,10 +592,6 @@ footer li{
         justify-content: space-around;
         width: 291px;
         flex-wrap: wrap;
-    }
-
-    .services .container{
-        justify-content: center;
     }
 
     .service-content{
