@@ -126,8 +126,98 @@ nav li{
     font-weight: bold;
 }
 
-.card img{
+
+.card-image{
     height: 250px;
+    width: 200px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("./assets/Group\ 8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.card-image::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(22,103,157,0.4), rgba(76,150,67,0.4)), url("./assets/Group\ 8.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+.card-image:hover::before{
+    opacity: 1;
+}
+    
+.card-image2{
+    height: 250px;
+    width: 200px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("./assets/Rectangle\ 5\ .png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.card-image2::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(22,103,157,0.4), rgba(76,150,67,0.4)), url("./assets/Rectangle\ 5\ .png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+.card-image2:hover::before{
+    opacity: 1;
+}
+
+.card-image3{
+    height: 250px;
+    width: 200px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("./assets/Group\ 33.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.card-image3::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(22,103,157,0.4), rgba(76,150,67,0.4)), url("./assets/Group\ 33.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+
+.card-image3:hover::before{
+    opacity: 1;
 }
 
 .enquire-button{
@@ -230,7 +320,7 @@ nav li{
 }
 
 .service-img img{
-    height: 450px;
+    height: 400px;
 }
 
 .service-img-mobile img{
@@ -245,6 +335,52 @@ nav li{
     width: 450px;
 }
 
+.collaboration-img{
+    position: relative;
+    z-index: 2;
+}
+
+.service-img{
+    width: 400px;
+}
+
+.bottom-ring, .top-ring{
+    height: 80px !important;
+    position: relative;
+}
+
+.bottom-ring{
+    right: 40px;
+    top: -50px;
+    z-index: 3;
+}
+
+.top-ring{
+    top: -450px;
+    right: -204px;
+}
+
+.service-img-mobile{
+    height: 400px;
+    display: none;
+    margin-top: 50px;
+}
+
+.bottom-ring-mobile, .top-ring-mobile{
+    height: 80px !important;
+    position: relative;
+}
+
+.bottom-ring-mobile{
+    right: 40px;
+    top: -50px;
+    z-index: 3;
+}
+
+.top-ring-mobile {
+    top: -410px;
+    right: -205px;
+}
 /* Business section */
 .business{
     height: auto;
@@ -283,7 +419,7 @@ nav li{
     padding: 0px 0px 20px 0px;
     width: 100%;
     background-color: #fff;
-    background-image: url("/assets/Rectangle\ 48.png");
+    background-image: url("./assets/Rectangle\ 48.png");
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 100px;
@@ -438,6 +574,11 @@ footer li{
     .service-img-mobile img{
         height: 300px;
     }
+
+    .top-ring-mobile {
+        top: -410px !important;
+        right: -205px !important;
+    }
 }
 
 @media only screen and (max-width: 500px){
@@ -586,16 +727,25 @@ footer li{
         display: block;
     }
 
+    .service-img-mobile{
+        display: block;
+    }
+
     .clients{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 291px;
+        width: 240px;
         flex-wrap: wrap;
     }
 
     .service-content{
         width: 70%;
+    }
+
+    .top-ring-mobile {
+        top: -465px;
+        right: -250px;
     }
 }
 
